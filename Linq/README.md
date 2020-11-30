@@ -1,4 +1,4 @@
-* Linq
+# Linq
 
 En utilisant Linq, créer une classe prennant en constructeur une liste et permettant de faire les actions suivantes:
 - Retourner une liste ordonnée filtrer d'élément à partir d'une entrée 
