@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace Linq
 {
@@ -79,27 +80,40 @@ namespace Linq
 
         public IEnumerable<string> FirstFive()
         {
-            return new string[0];
+            return liste.Take(5);
         }
 
         public IEnumerable<string> SkipFiveTakeFive()
         {
-            return new string[0];
+            return liste
+                .Skip(5)
+                .Take(5);
         }
         
         public int NbElement()
         {
-            return 0;
+            return liste.Count();
         }
 
         public int Somme(List<int> entiers)
         {
-            return 0;
+            return entiers.Sum();
         }
         
         public int SommeImpair(List<int> entiers)
         {
-            return 0;
+            return entiers.Where(s => s%2 == 1).Sum();
+        }
+
+        public int SommeNoteEleves(List<Eleve> eleves)
+        {
+            //eleves.Select(e => e.Note).Sum(); <== équivalent
+            return  eleves.Sum(e => e.Note);
+        }
+        
+        public class Eleve
+        {
+            public int Note { get; set; }
         }
     }
 }
