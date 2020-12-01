@@ -7,7 +7,7 @@ namespace CalcultriceDelegate.Tests
     public class Calculatrice_EqualShould
     {
         [Fact]
-        public void Addition_QuandJAiUneDivision()
+        public void Addition_QuandJAiUneAddition()
         {
             Calculatrice calculatrice = new Calculatrice();
 
